@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Cart</title>
+    <script src="cart.js" defer></script> <!-- Include the JavaScript file -->
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Items in Your Cart</h2>
+        <ul id="cart-items"></ul>
+
+        <button onclick="redirectToPayment()">Buy</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Food Ordering Website</p>
+    </footer>
+</body>
+</html>

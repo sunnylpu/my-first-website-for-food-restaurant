@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Updated Text Colors and Styling */
+        h1, h2 {
+            color: #060505; /* Coral color */
+        }
+        p{
+            font-size: 1.1em;
+            color: #070707;
+        }
+        body {
+            background-image: url(bk.jpg); /* Replace 'your-background-image.jpg' with the path to your background image */
+            background-size: cover ;
+            background-attachment: scroll; /* Keeps the background fixed while scrolling */
+            margin: 0;
+        }
+
+        nav a {
+            color: #4CAF50; /* Green color */
+            font-size: 20px; /* Increase font size for navigation links */
+            text-decoration: none; /* Remove underline */
+            margin-right: 20px; /* Add spacing between links */
+        }
+
+        nav a:hover {
+            color: #FF6F61; /* Change color on hover */
+        }
+
+        /* Additional Styling for Food Items */
+        .food-item {
+            width: 25%; /* Set width to 25% for four columns */
+            box-sizing: border-box; /* Include padding and border in the width */
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            position: relative;
+            color: #030303; /* White text color for better visibility on the dark background */
+            background-size: cover; /* Ensure the background image covers the entire container */
+            background-position: center; /* Center the background image */
+            overflow: hidden; /* Hide overflow to prevent background image from extending beyond the container */
+        }
+        .food-item img {
+            display: none; /* Hide the img element */
+        }
+        .food-item p {
+    color: #FFA07A; /* Light shade of orange for contrast */
+}
+
+        /* Add to Cart Button Styling */
+        .add-to-cart {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s; /* Add transition for smooth animation */
+        }
+
+        .add-to-cart:hover {
+            transform: scale(1.1); /* Increase size on hover */
+        }
+
+        /* Set background images for each food item */
+        .food-item:nth-child(odd) {
+            background-image: url('path-to-odd-background-image.jpg'); /* Set the path to the odd background image */
+        }
+
+        .food-item:nth-child(even) {
+            background-image: url('path-to-even-background-image.jpg'); /* Set the path to the even background image */
+        }
+    </style>
+    <title>North Indian Menu</title>
+</head>
+<body>
+    <header>
+        <h1>Delightful  Indian Cuisine</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="payment.html">payment</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section style="display: flex; flex-wrap: wrap;">
+        <!-- Achari Baingan -->
+        <div class="food-item">
+            <h3>Achari Baingan</h3>
+            <p>Brinjal cooked with pickle spices in gravy.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Achari Baingan')">Add to Cart</button>
+        </div>
+
+        <!-- Aloo Gobi -->
+        <div class="food-item">
+            <h3>Aloo Gobi</h3>
+            <p>Cauliflower with potatoes sautéed with garam masala, turmeric, sometimes kalonji, and curry leaves.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Aloo Gobi')">Add to Cart</button>
+        </div>
+
+        <!-- Aloo Tikki -->
+        <div class="food-item">
+            <h3>Aloo Tikki</h3>
+            <p>Patties of potato mixed with some vegetables fried.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Aloo Tikki')">Add to Cart</button>
+        </div>
+
+        <!-- Aloo Tuk -->
+        <div class="food-item">
+            <h3>Aloo Tuk</h3>
+            <p>Double-fried potatoes tossed in spices.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Aloo Tuk')">Add to Cart</button>
+        </div>
+
+        <!-- Aloo Matar -->
+        <div class="food-item">
+            <h3>Aloo Matar</h3>
+            <p>Potatoes and peas in curry.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Aloo Matar')">Add to Cart</button>
+        </div>
+
+        <!-- Aloo Kulcha -->
+        <div class="food-item">
+            <h3>Aloo Kulcha</h3>
+            <p>Mildly leavened flatbread stuffed with potatoes.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Aloo Kulcha')">Add to Cart</button>
+        </div>
+
+        <!-- Talit Macchi -->
+        <div class="food-item">
+            <h3>Talit Macchi (Indian fish fry)</h3>
+            <p>Fried fish made with curry, ginger, and garlic.</p>
+            <p>Non-Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Talit Macchi')">Add to Cart</button>
+        </div>
+
+        <!-- Baati -->
+        <div class="food-item">
+            <h3>Baati</h3>
+            <p>Hard, unleavened bread cooked in most areas of Rajasthan, and in some parts of Madhya Pradesh, and Gujarat states of India.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Baati')">Add to Cart</button>
+        </div>
+
+        <!-- Bhatura -->
+        <div class="food-item">
+            <h3>Bhatura</h3>
+            <p>A fluffy deep-fried leavened bread originating from the Indian subcontinent.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Bhatura')">Add to Cart</button>
+        </div>
+
+        <!-- Bhindi Masala -->
+        <div class="food-item">
+            <h3>Bhindi Masala</h3>
+            <p>Okra sautéed with onions and tomatoes.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Bhindi Masala')">Add to Cart</button>
+        </div>
+
+        <!-- Biryani -->
+        <div class="food-item">
+            <h3>Biryani</h3>
+            <p>Mixed rice dish with optional spices, optional vegetables, meats, or seafood. Can be served with plain yogurt.</p>
+            <p>Non-Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Biryani')">Add to Cart</button>
+        </div>
+
+        <!-- Butter Chicken -->
+        <div class="food-item">
+            <h3>Butter Chicken</h3>
+            <p>Chicken in a mildly spiced tomato sauce. Also known as murgh mahal.</p>
+            <p>Non-Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Butter Chicken')">Add to Cart</button>
+        </div>
+
+        <!-- Chaat -->
+        <div class="food-item">
+            <h3>Chaat</h3>
+            <p>Street food usually containing a potato patty fried in oil, topped with sweet yogurt, and other sauces and spices.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Chaat')">Add to Cart</button>
+        </div>
+
+        <!-- Chana Masala -->
+        <div class="food-item">
+            <h3>Chana Masala</h3>
+            <p>Chickpeas of the Chana type in a tomato-based sauce.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Chana Masala')">Add to Cart</button>
+        </div>
+
+        <!-- Chapati -->
+        <div class="food-item">
+            <h3>Chapati</h3>
+            <p>Unleavened flatbread originating from the Indian subcontinent and staple in India, Nepal, Bangladesh, Pakistan, Sri Lanka, East Africa, and the Caribbean.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Chapati')">Add to Cart</button>
+        </div>
+
+        <!-- Chicken Razala -->
+        <div class="food-item">
+            <h3>Chicken Razala</h3>
+            <p>A Bhopali style chicken cooked in a rich gravy with mint.</p>
+            <p>Non-Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Chicken Razala')">Add to Cart</button>
+        </div>
+
+        <!-- Chicken Tikka -->
+        <div class="food-item">
+            <h3>Chicken Tikka</h3>
+            <p>Chicken with spices served on a skewer.</p>
+            <p>Non-Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Chicken Tikka')">Add to Cart</button>
+        </div>
+
+        <!-- Chicken Tikka Masala -->
+        <div class="food-item">
+            <h3>Chicken Tikka Masala</h3>
+            <p>Chicken marinated in a Yogurt tomato sauce. It is known to have a creamy texture.</p>
+            <p>Non-Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Chicken Tikka Masala')">Add to Cart</button>
+        </div>
+
+        <!-- Chole Bhature -->
+        <div class="food-item">
+            <h3>Chole Bhature</h3>
+            <p>Main course with chickpeas, assorted spices, wheat flour, and bhatura yeast.</p>
+            <p>Vegetarian</p>
+            <button class="add-to-cart" onclick="addToCart('Chole Bhature')">Add to Cart</button>
+        </div>
+
+        <!-- Copy this pattern for the remaining items... -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 North Indian Delights</p>
+    </footer>
+
+    <!-- JavaScript for Add to Cart Functionality -->
+    <script>
+        function addToCart(itemName) {
+            // Check if the cart is stored in localStorage
+            if (localStorage.getItem('cart') === null) {
+                // If not, create an empty array and store it in localStorage
+                localStorage.setItem('cart', JSON.stringify([]));
+            }
+
+            // Retrieve the current cart items from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart'));
+
+            // Add the selected item to the cart
+            cart.push(itemName);
+
+            // Store the updated cart back in localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Optionally, you can display a confirmation message or redirect to a cart page
+            alert('Added ' + itemName + ' to cart!');
+        }
+    </script>
+
+</body>
+</html>

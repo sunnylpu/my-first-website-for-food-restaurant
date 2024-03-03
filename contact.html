@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Your Food Ordering Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('your-background-image.jpg'); /* Replace 'your-background-image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            
+        }
+
+        h1 {
+            color: #FF5733;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        /* Add cursor animation */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff; /* Initial cursor color */
+            pointer-events: none;
+            animation: cursorAnimation 1s infinite alternate;
+        }
+
+        @keyframes cursorAnimation {
+            0% {
+                background-color: #fff; /* Light color */
+            }
+            100% {
+                background-color: #000; /* Dark color */
+            }
+        }
+
+        h2 {
+            color: #fff; /* Text color for better visibility on the background */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the form */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #FF5733;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #D6490E;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+
+    <p>Email: <a href="mailto:sunnytyagi2004@gmail.com">sunnytyagi2004@gmail.com</a></p>
+    <p>Mobile No.: <a href="tel:+918192021030">8192021030</a></p>
+    <p>Address: Lovely Professional University</p>
+
+    <h2>Get in Touch</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
